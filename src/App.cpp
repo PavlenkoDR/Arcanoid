@@ -39,14 +39,16 @@ void App::Start()
     Game game( this );
     GameOver gameOver( this );
     Menu menu( this );
-    GameEvent even = NONE;
+    GameEvent even = MENU;
     while ( IsOpen() )
     {
-        even = menu.Start();
         game.SetLevel( 0 );
         if ( even == NONE )
         {
-
+        }
+        else if ( even == MENU )
+        {
+            menu.Start();
         }
         else if ( even == GAME_OVER )
         {

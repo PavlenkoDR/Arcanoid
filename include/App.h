@@ -7,6 +7,7 @@
 enum GameEvent
 {
     NONE,
+    MENU,
     WIN,
     GAME_OVER,
     EXIT
